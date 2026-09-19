@@ -1,0 +1,112 @@
+{% extends "base.html" %}
+
+{% block title %}About — Odense International School{% endblock %}
+{% block meta_description %}The story behind Odense International School, our teaching philosophy, and our Cambridge accreditation.{% endblock %}
+
+{% block content %}
+<div class="page-banner">
+  <div class="wrap">
+    <h1>Two schools, one courtyard</h1>
+    <p>The story behind Odense International School, what makes our teaching different, and what our Cambridge accreditation actually means for your child.</p>
+  </div>
+</div>
+
+<!-- HISTORY -->
+<section class="split">
+  <div class="wrap split__grid">
+    <div>
+      <div class="img-slot img-slot--panel" style="--img:url('{{ url_for('static', filename='images/two-systems.jpg') }}');" data-label="images/two-systems.jpg — courtyard or entrance"></div>
+    </div>
+    <div>
+      <h2>One building, since 1870</h2>
+      <p>
+        Henriette Hørlücks Skole has stood in the same part of Odense since 1870. In 2011, the school
+        opened an international department — Odense International School — inside the same building,
+        for families who needed an English-medium education without leaving the community their
+        children were already growing up in.
+      </p>
+      <p style="margin-top:16px;">
+        The result is a genuinely shared campus. Assembly happens together. The playground is the
+        same one. But from the first bell of the day, OIS students follow the Cambridge curriculum
+        in English, while their Danish-department classmates follow the Folkeskole system next door.
+      </p>
+      <blockquote class="quote">
+        “Placeholder — swap in a real quote from a parent, teacher, or the Head of School once you have one on file.”
+        <small>Attribution goes here</small>
+      </blockquote>
+    </div>
+  </div>
+</section>
+
+<!-- PHILOSOPHY -->
+<div class="principles-wrap" style="border-top:1px solid var(--line);">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Learning that starts with a question</h2>
+      <p>Lessons at OIS are built around inquiry rather than recitation — three things we try to get right in every classroom.</p>
+    </div>
+    <div class="principles">
+      <div class="principle">
+        <h3>Inquiry first</h3>
+        <p>Cross-curricular projects built around real questions, not just the next chapter in a textbook.</p>
+      </div>
+      <div class="principle">
+        <h3>Global by default</h3>
+        <p>Forty-plus nationalities in one building means classmates, not case studies, teach the rest of the world.</p>
+      </div>
+      <div class="principle">
+        <h3>Small enough to notice</h3>
+        <p>Class sizes stay small enough that a child who's struggling — or bored — doesn't go unnoticed for long.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PHILOSOPHY IMAGE -->
+<section class="split" style="padding-top:0;">
+  <div class="wrap split__grid">
+    <div>
+      <h2>What inquiry actually looks like</h2>
+      <p>
+        A lesson rarely starts with a definition here. It starts with something children can touch,
+        build, or argue about — and the explanation catches up once they've already asked the
+        question themselves.
+      </p>
+    </div>
+    <div>
+      <div class="img-slot img-slot--wide" style="--img:url('{{ url_for('static', filename='images/philosophy-classroom.jpg') }}');" data-label="images/philosophy-classroom.jpg — hands-on lesson"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ACCREDITATION -->
+<section class="stages" style="border-top:1px solid var(--line);">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Accreditation</h2>
+      <p>OIS is a certified Cambridge International Examinations Centre, which means our curriculum, assessments, and IGCSE results are set and checked against the same standard used by Cambridge schools worldwide.</p>
+    </div>
+    <div class="table-scroll">
+    <table class="fee-table">
+      <tr><th>Examinations centre number</th><td>DK061</td></tr>
+      <tr><th>Curriculum</th><td>Cambridge Primary → Cambridge Secondary → IGCSE</td></tr>
+      <tr><th>Latest inspection report</th><td><a href="#" style="color:var(--brick); font-weight:600;">2025–2026 report [attach PDF]</a></td></tr>
+      <tr><th>Previous inspection report</th><td><a href="#" style="color:var(--brick); font-weight:600;">2023–2024 report [attach PDF]</a></td></tr>
+    </table>
+    </div>
+    <p class="note">Confirm the current inspection report links and any additional accreditation details with the school office before publishing.</p>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="admissions">
+  <div class="wrap">
+    <h2>Want to see it for yourself?</h2>
+    <p>The building tells you more about how the two schools share space than any page here can.</p>
+    <div class="btn-row">
+      <a href="{{ url_for('main.admissions') }}" class="btn btn--primary">Book a visit</a>
+      <a href="{{ url_for('main.programmes') }}" class="btn btn--on-dark">See the programmes</a>
+    </div>
+  </div>
+</section>
+{% endblock %}

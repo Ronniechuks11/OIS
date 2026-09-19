@@ -1,0 +1,59 @@
+ODENSE INTERNATIONAL SCHOOL — PHOTO SHOT LIST
+================================================
+Save each file with the EXACT name below into this "images" folder
+(next to index.html) and it will appear on the live page automatically.
+Every slot also shows its filename as a caption on the page itself,
+so you can just scroll the site to see what's still missing.
+
+HOMEPAGE + ABOUT
+----------------
+hero-campus.jpg          Wide exterior shot of the building. This is the very
+                          first thing visitors see — use your strongest angle.
+two-systems.jpg           Courtyard or building entrance, portrait crop (used on
+                          the homepage and About page).
+why-odense.jpg            A street or bike scene in Odense — sells the
+                          relocation angle. Portrait crop.
+philosophy-classroom.jpg  Wide shot of an inquiry/hands-on lesson (makerspace,
+                          lab, group project).
+
+PROGRAMMES
+----------
+stage-preschool.jpg       Preschool room or play corner. 4:3 crop.
+stage-primary.jpg         Primary classroom in session. 4:3 crop.
+stage-secondary.jpg       Secondary classroom or lab. 4:3 crop.
+
+ADMISSIONS
+----------
+admissions-visit.jpg      A tour / open-house moment. Portrait crop.
+
+LIFE AT OIS (the big gallery page — 12 photos)
+-----------------------------------------------
+Community & assembly:
+  life-assembly-1.jpg     Your best assembly shot — this tile is the largest.
+  life-assembly-2.jpg
+  life-assembly-3.jpg
+
+Learning & making:
+  life-learning-1.jpg     Wide shot — makerspace/robotics/lab preferred.
+  life-learning-2.jpg
+  life-learning-3.jpg
+
+Play & friendship:
+  life-play-1.jpg
+  life-play-2.jpg
+  life-play-3.jpg
+
+Trips & celebrations:
+  life-trips-1.jpg        Wide shot — a school trip photo if you have one.
+  life-trips-2.jpg
+  life-trips-3.jpg
+
+Note: life-assembly-1.jpg, life-learning-1.jpg, life-play-1.jpg, and
+life-trips-1.jpg are also reused as the teaser strip on the homepage —
+so once the gallery page is fully shot, the homepage updates itself too.
+
+CONTACT
+-------
+No new photo needed — reuses hero-campus.jpg and a live Google Map embed.
+
+TOTAL: 20 unique photos

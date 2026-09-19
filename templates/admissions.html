@@ -1,0 +1,130 @@
+{% extends "base.html" %}
+
+{% block title %}Admissions — Odense International School{% endblock %}
+{% block meta_description %}How admissions work at Odense International School — process, fees, and frequently asked questions.{% endblock %}
+
+{% block content %}
+<div class="page-banner">
+  <div class="wrap">
+    <h1>Beginning the admissions journey</h1>
+    <p>Admissions run on a rolling basis for ages 5 through 16, so there's no single deadline to race toward — here's exactly how the process works.</p>
+  </div>
+</div>
+
+<!-- STEPS -->
+<section class="split">
+  <div class="wrap split__grid">
+    <div>
+      <h2>Four steps, start to finish</h2>
+      <div class="steps">
+        <div class="step" style="border-top:none;">
+          <div class="step__num">1</div>
+          <div class="step__body"><h3>Inquire &amp; book a tour</h3><p>Reach out and walk the building — most families find this is what actually answers the "is this the right fit" question.</p></div>
+        </div>
+        <div class="step">
+          <div class="step__num">2</div>
+          <div class="step__body"><h3>Submit your application</h3><p>Basic family and student details, plus recent school reports if your child is transferring.</p></div>
+        </div>
+        <div class="step">
+          <div class="step__num">3</div>
+          <div class="step__body"><h3>Assessment &amp; welcome meeting</h3><p>A short, low-pressure check-in to understand where your child is and how we can support them from day one.</p></div>
+        </div>
+        <div class="step" style="border-bottom:1px solid var(--line);">
+          <div class="step__num">4</div>
+          <div class="step__body"><h3>Offer &amp; enrollment</h3><p>Once a place is confirmed, we'll walk you through enrollment paperwork and a start date.</p></div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="img-slot img-slot--panel" style="--img:url('{{ url_for('static', filename='images/admissions-visit.jpg') }}');" data-label="images/admissions-visit.jpg — a tour or open house moment"></div>
+    </div>
+  </div>
+</section>
+
+<!-- FEES -->
+<section class="stages" style="border-top:1px solid var(--line);">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Tuition</h2>
+      <p>2026/27 school year. No bus service or canteen is included in tuition.</p>
+    </div>
+    <div class="table-scroll">
+    <table class="fee-table">
+      <tr><th>Application fee</th><td>[confirm current amount with the office]</td></tr>
+      <tr><th>Annual tuition</th><td>DKK 41,580 – 43,780, depending on grade level</td></tr>
+      <tr><th>One-time enrollment fee</th><td>[confirm current amount with the office]</td></tr>
+    </table>
+    </div>
+    <p class="note">Figures are drawn from the school's most recent published fee schedule — confirm exact current numbers with the office before publishing this page live.</p>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="stages" style="border-top:1px solid var(--line); padding-top:60px;">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Frequently asked questions</h2>
+    </div>
+    <div class="faq">
+      <details open>
+        <summary>What language is instruction in?</summary>
+        <p>English, throughout the entire school day, from Preschool through Secondary. Danish is taught as an additional subject.</p>
+      </details>
+      <details>
+        <summary>Is there a school bus or canteen?</summary>
+        <p>No — tuition does not currently include bus service or a canteen. Most families arrange their own transport and packed lunches.</p>
+      </details>
+      <details>
+        <summary>Can Danish families apply, or is it only for relocating families?</summary>
+        <p>[Confirm with the school: many international schools welcome local families too, alongside those relocating for work — worth stating clearly here once confirmed.]</p>
+      </details>
+      <details>
+        <summary>When can we apply?</summary>
+        <p>Admissions are rolling — you can inquire at any point in the school year, and placement depends on space in the relevant grade.</p>
+      </details>
+      <details>
+        <summary>Do you give priority to siblings or families already relocating for work?</summary>
+        <p>[Confirm the school's exact priority policy before publishing — this is common practice among international schools but should be stated accurately for OIS specifically.]</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- INQUIRY FORM -->
+<section class="split" id="apply" style="border-top:1px solid var(--line);">
+  <div class="wrap">
+    <div class="section-head" style="margin-bottom:0;">
+      <h2>Start an inquiry</h2>
+      <p>Send us a few details and we'll follow up to arrange a tour.</p>
+    </div>
+    <form class="form-grid" method="post" action="{{ url_for('main.admissions') }}#apply" novalidate>
+      {{ form.hidden_tag() }}
+      <div class="field">
+        <label for="parentName">Parent / guardian name</label>
+        {{ form.parent_name(id="parentName", class="is-invalid" if form.parent_name.errors else "") }}
+        {% for error in form.parent_name.errors %}<span class="field-error">{{ error }}</span>{% endfor %}
+      </div>
+      <div class="field">
+        <label for="email">Email</label>
+        {{ form.email(id="email", class="is-invalid" if form.email.errors else "") }}
+        {% for error in form.email.errors %}<span class="field-error">{{ error }}</span>{% endfor %}
+      </div>
+      <div class="field">
+        <label for="childName">Child's name</label>
+        {{ form.child_name(id="childName") }}
+      </div>
+      <div class="field">
+        <label for="grade">Grade applying for</label>
+        {{ form.grade(id="grade") }}
+      </div>
+      <div class="field full">
+        <label for="message">Anything else we should know?</label>
+        {{ form.message(id="message") }}
+      </div>
+      <div class="field full">
+        <button type="submit" class="btn btn--primary">Send inquiry</button>
+      </div>
+    </form>
+  </div>
+</section>
+{% endblock %}

@@ -1,0 +1,108 @@
+{% extends "base.html" %}
+
+{% block title %}Programmes — Odense International School{% endblock %}
+{% block meta_description %}Preschool, Primary, and Secondary at Odense International School — the full Cambridge pathway from age 3 to IGCSE.{% endblock %}
+
+{% block content %}
+<div class="page-banner">
+  <div class="wrap">
+    <h1>From first day to IGCSE</h1>
+    <p>Three stages, one continuous Cambridge pathway — each one building directly on the last, in the same building, with the same faces in the hallway.</p>
+  </div>
+</div>
+
+<section class="stages">
+  <div class="wrap">
+
+    <div class="stage">
+      <div class="stage__code"><strong>Pre</strong><span>Ages 3–5</span></div>
+      <div class="stage__body">
+        <h3>Preschool</h3>
+        <p>Early English immersion through play, songs, and a steady daily routine — the goal is comfort and confidence in the language before Primary asks anything more formal of it.</p>
+        <ul>
+          <li>Daily English immersion through songs, stories, and play</li>
+          <li>Fine motor and pre-literacy groundwork</li>
+          <li>Shared assembly and playground time with the wider school</li>
+        </ul>
+      </div>
+      <div class="stage__media">
+        <div class="img-slot img-slot--thumb" style="--img:url('{{ url_for('static', filename='images/stage-preschool.jpg') }}');" data-label="images/stage-preschool.jpg"></div>
+      </div>
+    </div>
+
+    <div class="stage">
+      <div class="stage__code"><strong>P1–P6</strong><span>Ages 5–11</span></div>
+      <div class="stage__body">
+        <h3>Primary</h3>
+        <p>The full Cambridge Primary curriculum — English, Maths, and Science as the core, wrapped in cross-curricular inquiry projects that pull in art, geography, and history along the way.</p>
+        <ul>
+          <li>Cambridge Primary: English, Mathematics, Science</li>
+          <li>Cross-curricular inquiry projects each term</li>
+          <li>Danish language lessons woven through the week</li>
+        </ul>
+      </div>
+      <div class="stage__media">
+        <div class="img-slot img-slot--thumb" style="--img:url('{{ url_for('static', filename='images/stage-primary.jpg') }}');" data-label="images/stage-primary.jpg"></div>
+      </div>
+    </div>
+
+    <div class="stage">
+      <div class="stage__code"><strong>S7–S11</strong><span>Ages 11–16</span></div>
+      <div class="stage__body">
+        <h3>Secondary</h3>
+        <p>Cambridge Secondary building toward IGCSE, with subject specialisation increasing each year and French introduced in the upper years alongside continued Danish.</p>
+        <ul>
+          <li>Cambridge Secondary through to IGCSE examinations</li>
+          <li>French introduced in the upper years</li>
+          <li>Subject specialisation increases year over year</li>
+        </ul>
+      </div>
+      <div class="stage__media">
+        <div class="img-slot img-slot--thumb" style="--img:url('{{ url_for('static', filename='images/stage-secondary.jpg') }}');" data-label="images/stage-secondary.jpg"></div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- AFTER OIS -->
+<section class="split" style="border-top:1px solid var(--line);">
+  <div class="wrap split__grid">
+    <div>
+      <h2>Where students go after IGCSE</h2>
+      <p>
+        OIS runs through age 16, so IGCSE is the end of our pathway rather than the middle of it.
+        From there, students typically move on to an IB Diploma programme, the Danish gymnasium
+        system, or a vocational track — whichever fits where the family is headed next.
+      </p>
+    </div>
+    <div>
+      <div class="steps" style="margin-top:0;">
+        <div class="step" style="border-top:none; padding-top:0;">
+          <div class="step__num">A</div>
+          <div class="step__body"><h3>IB Diploma Programme</h3><p>The most common route for families staying on an international track.</p></div>
+        </div>
+        <div class="step">
+          <div class="step__num">B</div>
+          <div class="step__body"><h3>Danish gymnasium</h3><p>For students settling into the Danish system long-term.</p></div>
+        </div>
+        <div class="step" style="border-bottom:1px solid var(--line);">
+          <div class="step__num">C</div>
+          <div class="step__body"><h3>Vocational routes</h3><p>Available depending on the student's interests and plans.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="admissions">
+  <div class="wrap">
+    <h2>Ready to walk through it in person?</h2>
+    <p>A tour makes the age-stage breakdown a lot more concrete than a page ever will.</p>
+    <div class="btn-row">
+      <a href="{{ url_for('main.admissions') }}" class="btn btn--primary">Book a visit</a>
+      <a href="{{ url_for('main.about') }}" class="btn btn--on-dark">Read our story</a>
+    </div>
+  </div>
+</section>
+{% endblock %}

@@ -1,0 +1,142 @@
+{% extends "base.html" %}
+
+{% block title %}Odense International School{% endblock %}
+{% block meta_description %}A Cambridge-certified international school inside Henriette Hørlücks Skole, Odense, Denmark.{% endblock %}
+
+{% block content %}
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap hero__grid">
+    <div class="hero__copy">
+      <h1>One school. Two systems. Forty nations under one roof.</h1>
+      <p class="hero__lede">
+        Odense International School shares its courtyard with Henriette Hørlücks Skole, the Danish
+        school next door — one campus, two paths. Children follow a Cambridge curriculum taught
+        entirely in English, from their first day of Preschool through IGCSE.
+      </p>
+      <div class="btn-row">
+        <a href="{{ url_for('main.admissions') }}" class="btn btn--primary">Book a visit</a>
+        <a href="{{ url_for('main.programmes') }}" class="btn btn--outline">See how it works</a>
+      </div>
+      <div class="stat-row">
+        <span class="stat-chip">Est. 1870</span>
+        <span class="stat-chip">40+ nations</span>
+        <span class="stat-chip">Ages 5–16</span>
+        <span class="stat-chip">Cambridge certified</span>
+      </div>
+    </div>
+    <div class="hero__media">
+      <div class="img-slot img-slot--hero" style="--img:url('{{ url_for('static', filename='images/hero-campus.jpg') }}');"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ONE CAMPUS TWO SYSTEMS — teaser -->
+<section class="split">
+  <div class="wrap split__grid">
+    <div>
+      <div class="img-slot img-slot--panel" style="--img:url('{{ url_for('static', filename='images/two-systems.jpg') }}');" data-label="images/two-systems.jpg"></div>
+    </div>
+    <div>
+      <h2>Two schools, one courtyard</h2>
+      <p>
+        OIS is the international department of Henriette Hørlücks Skole, a Danish school founded in
+        1870. Children share morning assembly and the playground, then follow entirely separate
+        curricula — Cambridge in English on one side, the Danish Folkeskole system on the other.
+      </p>
+      <div class="btn-row" style="margin-top:22px;">
+        <a href="{{ url_for('main.about') }}" class="btn btn--outline">Read our story</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROGRAMMES — teaser cards -->
+<section class="stages">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>From first day to IGCSE</h2>
+      <p>Three stages, one continuous Cambridge pathway — each building directly on the last.</p>
+    </div>
+    <div class="teaser-grid">
+      <div class="teaser-card">
+        <div class="teaser-card__media img-slot" style="--img:url('{{ url_for('static', filename='images/stage-preschool.jpg') }}');" data-label="images/stage-preschool.jpg"></div>
+        <div class="teaser-card__body">
+          <h3>Preschool · Ages 3–5</h3>
+          <p>Early English immersion through play and structured routine.</p>
+          <a href="{{ url_for('main.programmes') }}">See the Preschool day</a>
+        </div>
+      </div>
+      <div class="teaser-card">
+        <div class="teaser-card__media img-slot" style="--img:url('{{ url_for('static', filename='images/stage-primary.jpg') }}');" data-label="images/stage-primary.jpg"></div>
+        <div class="teaser-card__body">
+          <h3>Primary · Ages 5–11</h3>
+          <p>Cambridge Primary curriculum with cross-curricular inquiry projects.</p>
+          <a href="{{ url_for('main.programmes') }}">See the Primary years</a>
+        </div>
+      </div>
+      <div class="teaser-card">
+        <div class="teaser-card__media img-slot" style="--img:url('{{ url_for('static', filename='images/stage-secondary.jpg') }}');" data-label="images/stage-secondary.jpg"></div>
+        <div class="teaser-card__body">
+          <h3>Secondary · Ages 11–16</h3>
+          <p>Cambridge Secondary through to IGCSE, with French from the upper years.</p>
+          <a href="{{ url_for('main.programmes') }}">See the Secondary years</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LIFE AT OIS — teaser gallery -->
+<section class="gallery-wrap" style="padding-block:80px; background:var(--cream-card);">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Life at OIS</h2>
+      <p>A few of the everyday moments that don't show up in a curriculum document.</p>
+    </div>
+    <div class="gallery">
+      <div class="gallery__item--a img-slot" style="--img:url('{{ url_for('static', filename='images/life-assembly-1.jpg') }}');" data-label="images/life-assembly-1.jpg"></div>
+      <div class="gallery__item--b img-slot" style="--img:url('{{ url_for('static', filename='images/life-learning-1.jpg') }}');" data-label="images/life-learning-1.jpg"></div>
+      <div class="gallery__item--c img-slot" style="--img:url('{{ url_for('static', filename='images/life-play-1.jpg') }}');" data-label="images/life-play-1.jpg"></div>
+      <div class="gallery__item--d img-slot" style="--img:url('{{ url_for('static', filename='images/life-trips-1.jpg') }}');" data-label="images/life-trips-1.jpg"></div>
+    </div>
+    <div class="btn-row" style="margin-top:32px;">
+      <a href="{{ url_for('main.life') }}" class="btn btn--outline">See the full gallery</a>
+    </div>
+  </div>
+</section>
+
+<!-- WHY ODENSE -->
+<section class="why">
+  <div class="wrap split__grid">
+    <div>
+      <h2>Settling into Odense</h2>
+      <p>
+        Denmark's third-largest city is compact, bike-first, and built around Odense University
+        Hospital and the University of Southern Denmark — which means a steady flow of relocating
+        families already navigating the same move yours is making.
+      </p>
+      <ul>
+        <li>Short, mostly-by-bike commutes across the whole city</li>
+        <li>A large existing international community around SDU and OUH</li>
+        <li>A comparatively straightforward relocation process for families</li>
+      </ul>
+    </div>
+    <div>
+      <div class="img-slot img-slot--panel" style="--img:url('{{ url_for('static', filename='images/why-odense.jpg') }}');" data-label="images/why-odense.jpg"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ADMISSIONS CTA -->
+<section class="admissions">
+  <div class="wrap">
+    <h2>Ready to see it in person?</h2>
+    <p>Admissions run on a rolling basis for ages 5 through 16. A short visit tells you more than any page on this site can.</p>
+    <div class="btn-row">
+      <a href="{{ url_for('main.admissions') }}" class="btn btn--primary">Start your application</a>
+      <a href="{{ url_for('main.contact') }}" class="btn btn--on-dark">Talk to us first</a>
+    </div>
+  </div>
+</section>
+{% endblock %}
