@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 
 {% block title %}Admissions — Odense International School{% endblock %}
-{% block meta_description %}How admissions work at Odense International School — process, fees, and frequently asked questions.{% endblock %}
+{% block meta_description %}Rolling admissions for ages 5–16 at Odense International School — the application process, current tuition fees, and answers to common questions.{% endblock %}
 
 {% block content %}
 <div class="page-banner">
@@ -36,7 +36,7 @@
       </div>
     </div>
     <div>
-      <div class="img-slot img-slot--panel" style="--img:url('{{ url_for('static', filename='images/admissions-visit.jpg') }}');" data-label="images/admissions-visit.jpg — a tour or open house moment"></div>
+      <div class="img-slot img-slot--panel" data-label="images/admissions-visit.jpg — a tour or open house moment"><img src="{{ url_for('static', filename='images/admissions-visit.jpg') }}" alt="" onerror="this.closest('.img-slot').classList.add('img-slot--empty');this.remove();"></div>
     </div>
   </div>
 </section>

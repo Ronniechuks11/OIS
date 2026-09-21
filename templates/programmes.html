@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 
 {% block title %}Programmes — Odense International School{% endblock %}
-{% block meta_description %}Preschool, Primary, and Secondary at Odense International School — the full Cambridge pathway from age 3 to IGCSE.{% endblock %}
+{% block meta_description %}Preschool through Secondary at Odense International School — one continuous Cambridge pathway from age 3 to IGCSE, taught entirely in English.{% endblock %}
 
 {% block content %}
 <div class="page-banner">
@@ -26,7 +26,7 @@
         </ul>
       </div>
       <div class="stage__media">
-        <div class="img-slot img-slot--thumb" style="--img:url('{{ url_for('static', filename='images/stage-preschool.jpg') }}');" data-label="images/stage-preschool.jpg"></div>
+        <div class="img-slot img-slot--thumb" data-label="images/stage-preschool.jpg"><img src="{{ url_for('static', filename='images/stage-preschool.jpg') }}" alt="" onerror="this.closest('.img-slot').classList.add('img-slot--empty');this.remove();"></div>
       </div>
     </div>
 
@@ -42,7 +42,7 @@
         </ul>
       </div>
       <div class="stage__media">
-        <div class="img-slot img-slot--thumb" style="--img:url('{{ url_for('static', filename='images/stage-primary.jpg') }}');" data-label="images/stage-primary.jpg"></div>
+        <div class="img-slot img-slot--thumb" data-label="images/stage-primary.jpg"><img src="{{ url_for('static', filename='images/stage-primary.jpg') }}" alt="" onerror="this.closest('.img-slot').classList.add('img-slot--empty');this.remove();"></div>
       </div>
     </div>
 
@@ -58,7 +58,7 @@
         </ul>
       </div>
       <div class="stage__media">
-        <div class="img-slot img-slot--thumb" style="--img:url('{{ url_for('static', filename='images/stage-secondary.jpg') }}');" data-label="images/stage-secondary.jpg"></div>
+        <div class="img-slot img-slot--thumb" data-label="images/stage-secondary.jpg"><img src="{{ url_for('static', filename='images/stage-secondary.jpg') }}" alt="" onerror="this.closest('.img-slot').classList.add('img-slot--empty');this.remove();"></div>
       </div>
     </div>
 

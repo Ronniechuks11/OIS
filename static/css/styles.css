@@ -183,12 +183,21 @@ section{ scroll-margin-top: var(--nav-h); }
 .nav__mobile-panel a:last-child{ border-bottom:none; }
 
 /* ---------- Image slots ---------- */
-.img-slot{ position:relative; overflow:hidden; background-color:#DCD5C3; background-image:var(--img, none); background-size:cover; background-position:center; width:100%; height:100%; }
+.img-slot{ position:relative; overflow:hidden; background-color:#DCD5C3; width:100%; height:100%; }
+.img-slot img{ width:100%; height:100%; object-fit:cover; display:block; }
+
+/* Filename badge is hidden by default. It only shows once the real <img>
+   above fails to load (the inline onerror handler in the templates adds
+   this class and removes the broken <img>) — so a slot with a real photo
+   never shows its path, and an empty one always does. Nothing to toggle
+   by hand per photo anymore. */
 .img-slot[data-label]::after{
   content:attr(data-label); position:absolute; left:12px; bottom:12px; max-width:calc(100% - 24px);
   background:rgba(35,32,25,.88); color:var(--paper); font:500 .68rem/1.4 'Work Sans', sans-serif;
   letter-spacing:.01em; padding:6px 11px; border-radius:3px;
+  display:none;
 }
+.img-slot--empty[data-label]::after{ display:block; }
 .img-slot--hero{ aspect-ratio:6/5; border-radius:6px; min-height:340px; }
 .img-slot--panel{ aspect-ratio:3/4; border-radius:6px; }
 .img-slot--wide{ aspect-ratio:16/9; border-radius:6px; }
@@ -367,3 +376,70 @@ footer{ background:var(--pine-dark); color:rgba(239,235,226,.9); padding-block:6
 .hero__copy > *:nth-child(3){ animation-delay:.30s; }
 .hero__copy > *:nth-child(4){ animation-delay:.42s; }
 @media (prefers-reduced-motion: reduce){ .hero__copy > *{ opacity:1; animation:none; } }
+
+/* ============================================================
+   PAGE LOADER — the school crest animates in once per browser
+   session (see script.js), then gets out of the way. Repeat
+   visits within the same session skip straight to is-skipped
+   so clicking around the site never feels slowed down.
+   ============================================================ */
+.page-loader{
+  position:fixed; inset:0; z-index:999;
+  display:flex; align-items:center; justify-content:center;
+  background:var(--pine-dark);
+  transition:opacity .5s ease;
+}
+.page-loader__inner{ display:flex; flex-direction:column; align-items:center; gap:18px; }
+
+.page-loader__badge{
+  width:120px; height:120px; border-radius:50%;
+  position:relative; overflow:hidden;
+  opacity:0; transform:scale(.55) rotate(-10deg);
+  animation:loaderBadgeIn .8s cubic-bezier(.34,1.56,.64,1) .1s forwards,
+            loaderPulse 2.2s ease-in-out .9s infinite;
+}
+.page-loader__badge img{ width:100%; height:100%; display:block; }
+.page-loader__badge::after{
+  content:""; position:absolute; inset:0;
+  background:linear-gradient(115deg, transparent 40%, rgba(255,255,255,.55) 50%, transparent 60%);
+  transform:translateX(-120%);
+  animation:loaderShine 1.1s ease .8s 1;
+}
+
+@keyframes loaderBadgeIn{
+  0%{ opacity:0; transform:scale(.55) rotate(-10deg); }
+  100%{ opacity:1; transform:scale(1) rotate(0deg); }
+}
+@keyframes loaderShine{
+  0%{ transform:translateX(-120%); }
+  100%{ transform:translateX(120%); }
+}
+@keyframes loaderPulse{
+  0%,100%{ box-shadow:0 0 0 0 rgba(212,175,55,0); }
+  50%{ box-shadow:0 0 26px 6px rgba(212,175,55,.32); }
+}
+
+.page-loader__word{
+  font-family:'Fraunces', serif; font-weight:600; font-size:.92rem;
+  letter-spacing:.14em; text-transform:uppercase;
+  color:var(--paper); text-align:center; max-width:230px;
+  opacity:0; transform:translateY(10px);
+  animation:loaderFadeUp .6s ease .55s forwards;
+}
+.page-loader__rule{
+  display:block; width:0; height:2px; background:var(--brick);
+  animation:loaderRule .5s ease .95s forwards;
+}
+@keyframes loaderFadeUp{ to{ opacity:1; transform:translateY(0); } }
+@keyframes loaderRule{ to{ width:64px; } }
+
+.page-loader.is-done{ opacity:0; pointer-events:none; }
+.page-loader.is-skipped{ display:none; }
+
+@media (prefers-reduced-motion: reduce){
+  .page-loader{ transition:opacity .2s ease; }
+  .page-loader__badge{ animation:none; opacity:1; transform:none; }
+  .page-loader__badge::after{ animation:none; display:none; }
+  .page-loader__word{ animation:none; opacity:1; transform:none; }
+  .page-loader__rule{ animation:none; width:64px; }
+}

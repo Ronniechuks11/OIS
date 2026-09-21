@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 
 {% block title %}About — Odense International School{% endblock %}
-{% block meta_description %}The story behind Odense International School, our teaching philosophy, and our Cambridge accreditation.{% endblock %}
+{% block meta_description %}Founded in 2011 inside Henriette Hørlücks Skole (est. 1870) — the story, teaching philosophy, and Cambridge accreditation behind Odense International School.{% endblock %}
 
 {% block content %}
 <div class="page-banner">
@@ -15,7 +15,7 @@
 <section class="split">
   <div class="wrap split__grid">
     <div>
-      <div class="img-slot img-slot--panel" style="--img:url('{{ url_for('static', filename='images/two-systems.jpg') }}');" data-label="images/two-systems.jpg — courtyard or entrance"></div>
+      <div class="img-slot img-slot--panel" data-label="images/two-systems.jpg — courtyard or entrance"><img src="{{ url_for('static', filename='images/two-systems.jpg') }}" alt="" onerror="this.closest('.img-slot').classList.add('img-slot--empty');this.remove();"></div>
     </div>
     <div>
       <h2>One building, since 1870</h2>
@@ -74,7 +74,7 @@
       </p>
     </div>
     <div>
-      <div class="img-slot img-slot--wide" style="--img:url('{{ url_for('static', filename='images/philosophy-classroom.jpg') }}');" data-label="images/philosophy-classroom.jpg — hands-on lesson"></div>
+      <div class="img-slot img-slot--wide" data-label="images/philosophy-classroom.jpg — hands-on lesson"><img src="{{ url_for('static', filename='images/philosophy-classroom.jpg') }}" alt="" onerror="this.closest('.img-slot').classList.add('img-slot--empty');this.remove();"></div>
     </div>
   </div>
 </section>

@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 
 {% block title %}Odense International School{% endblock %}
-{% block meta_description %}A Cambridge-certified international school inside Henriette Hørlücks Skole, Odense, Denmark.{% endblock %}
+{% block meta_description %}Cambridge curriculum taught in English for ages 5–16, inside a Danish school dating to 1870. 40+ nationalities, one campus, in Odense, Denmark.{% endblock %}
 
 {% block content %}
 <!-- HERO -->
@@ -26,7 +26,7 @@
       </div>
     </div>
     <div class="hero__media">
-      <div class="img-slot img-slot--hero" style="--img:url('{{ url_for('static', filename='images/hero-campus.jpg') }}');"></div>
+      <div class="img-slot img-slot--hero" data-label="images/hero-campus.jpg — wide exterior shot"><img src="{{ url_for('static', filename='images/hero-campus.jpg') }}" alt="" onerror="this.closest('.img-slot').classList.add('img-slot--empty');this.remove();"></div>
     </div>
   </div>
 </section>
@@ -35,7 +35,7 @@
 <section class="split">
   <div class="wrap split__grid">
     <div>
-      <div class="img-slot img-slot--panel" style="--img:url('{{ url_for('static', filename='images/two-systems.jpg') }}');" data-label="images/two-systems.jpg"></div>
+      <div class="img-slot img-slot--panel" data-label="images/two-systems.jpg"><img src="{{ url_for('static', filename='images/two-systems.jpg') }}" alt="" onerror="this.closest('.img-slot').classList.add('img-slot--empty');this.remove();"></div>
     </div>
     <div>
       <h2>Two schools, one courtyard</h2>
@@ -60,7 +60,7 @@
     </div>
     <div class="teaser-grid">
       <div class="teaser-card">
-        <div class="teaser-card__media img-slot" style="--img:url('{{ url_for('static', filename='images/stage-preschool.jpg') }}');" data-label="images/stage-preschool.jpg"></div>
+        <div class="teaser-card__media img-slot" data-label="images/stage-preschool.jpg"><img src="{{ url_for('static', filename='images/stage-preschool.jpg') }}" alt="" onerror="this.closest('.img-slot').classList.add('img-slot--empty');this.remove();"></div>
         <div class="teaser-card__body">
           <h3>Preschool · Ages 3–5</h3>
           <p>Early English immersion through play and structured routine.</p>
@@ -68,7 +68,7 @@
         </div>
       </div>
       <div class="teaser-card">
-        <div class="teaser-card__media img-slot" style="--img:url('{{ url_for('static', filename='images/stage-primary.jpg') }}');" data-label="images/stage-primary.jpg"></div>
+        <div class="teaser-card__media img-slot" data-label="images/stage-primary.jpg"><img src="{{ url_for('static', filename='images/stage-primary.jpg') }}" alt="" onerror="this.closest('.img-slot').classList.add('img-slot--empty');this.remove();"></div>
         <div class="teaser-card__body">
           <h3>Primary · Ages 5–11</h3>
           <p>Cambridge Primary curriculum with cross-curricular inquiry projects.</p>
@@ -76,7 +76,7 @@
         </div>
       </div>
       <div class="teaser-card">
-        <div class="teaser-card__media img-slot" style="--img:url('{{ url_for('static', filename='images/stage-secondary.jpg') }}');" data-label="images/stage-secondary.jpg"></div>
+        <div class="teaser-card__media img-slot" data-label="images/stage-secondary.jpg"><img src="{{ url_for('static', filename='images/stage-secondary.jpg') }}" alt="" onerror="this.closest('.img-slot').classList.add('img-slot--empty');this.remove();"></div>
         <div class="teaser-card__body">
           <h3>Secondary · Ages 11–16</h3>
           <p>Cambridge Secondary through to IGCSE, with French from the upper years.</p>
@@ -95,10 +95,10 @@
       <p>A few of the everyday moments that don't show up in a curriculum document.</p>
     </div>
     <div class="gallery">
-      <div class="gallery__item--a img-slot" style="--img:url('{{ url_for('static', filename='images/life-assembly-1.jpg') }}');" data-label="images/life-assembly-1.jpg"></div>
-      <div class="gallery__item--b img-slot" style="--img:url('{{ url_for('static', filename='images/life-learning-1.jpg') }}');" data-label="images/life-learning-1.jpg"></div>
-      <div class="gallery__item--c img-slot" style="--img:url('{{ url_for('static', filename='images/life-play-1.jpg') }}');" data-label="images/life-play-1.jpg"></div>
-      <div class="gallery__item--d img-slot" style="--img:url('{{ url_for('static', filename='images/life-trips-1.jpg') }}');" data-label="images/life-trips-1.jpg"></div>
+      <div class="gallery__item--a img-slot" data-label="images/life-assembly-1.jpg"><img src="{{ url_for('static', filename='images/life-assembly-1.jpg') }}" alt="" onerror="this.closest('.img-slot').classList.add('img-slot--empty');this.remove();"></div>
+      <div class="gallery__item--b img-slot" data-label="images/life-learning-1.jpg"><img src="{{ url_for('static', filename='images/life-learning-1.jpg') }}" alt="" onerror="this.closest('.img-slot').classList.add('img-slot--empty');this.remove();"></div>
+      <div class="gallery__item--c img-slot" data-label="images/life-play-1.jpg"><img src="{{ url_for('static', filename='images/life-play-1.jpg') }}" alt="" onerror="this.closest('.img-slot').classList.add('img-slot--empty');this.remove();"></div>
+      <div class="gallery__item--d img-slot" data-label="images/life-trips-1.jpg"><img src="{{ url_for('static', filename='images/life-trips-1.jpg') }}" alt="" onerror="this.closest('.img-slot').classList.add('img-slot--empty');this.remove();"></div>
     </div>
     <div class="btn-row" style="margin-top:32px;">
       <a href="{{ url_for('main.life') }}" class="btn btn--outline">See the full gallery</a>
@@ -123,7 +123,7 @@
       </ul>
     </div>
     <div>
-      <div class="img-slot img-slot--panel" style="--img:url('{{ url_for('static', filename='images/why-odense.jpg') }}');" data-label="images/why-odense.jpg"></div>
+      <div class="img-slot img-slot--panel" data-label="images/why-odense.jpg"><img src="{{ url_for('static', filename='images/why-odense.jpg') }}" alt="" onerror="this.closest('.img-slot').classList.add('img-slot--empty');this.remove();"></div>
     </div>
   </div>
 </section>

@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 
 {% block title %}Life at OIS — Odense International School{% endblock %}
-{% block meta_description %}Everyday moments at Odense International School — assembly, learning, play, and school trips.{% endblock %}
+{% block meta_description %}A look at everyday life at Odense International School: morning assembly, hands-on learning, playground time, and school trips abroad.{% endblock %}
 
 {% block content %}
 <div class="page-banner">
@@ -18,9 +18,9 @@
       <h3>Community &amp; assembly</h3>
       <p>Mornings together, before the two departments split off for the day.</p>
       <div class="gallery">
-        <div class="gallery__item--a img-slot" style="--img:url('{{ url_for('static', filename='images/life-assembly-1.jpg') }}');" data-label="images/life-assembly-1.jpg"></div>
-        <div class="gallery__item--c img-slot" style="--img:url('{{ url_for('static', filename='images/life-assembly-2.jpg') }}');" data-label="images/life-assembly-2.jpg"></div>
-        <div class="gallery__item--c img-slot" style="--img:url('{{ url_for('static', filename='images/life-assembly-3.jpg') }}');" data-label="images/life-assembly-3.jpg"></div>
+        <div class="gallery__item--a img-slot" data-label="images/life-assembly-1.jpg"><img src="{{ url_for('static', filename='images/life-assembly-1.jpg') }}" alt="" onerror="this.closest('.img-slot').classList.add('img-slot--empty');this.remove();"></div>
+        <div class="gallery__item--c img-slot" data-label="images/life-assembly-2.jpg"><img src="{{ url_for('static', filename='images/life-assembly-2.jpg') }}" alt="" onerror="this.closest('.img-slot').classList.add('img-slot--empty');this.remove();"></div>
+        <div class="gallery__item--c img-slot" data-label="images/life-assembly-3.jpg"><img src="{{ url_for('static', filename='images/life-assembly-3.jpg') }}" alt="" onerror="this.closest('.img-slot').classList.add('img-slot--empty');this.remove();"></div>
       </div>
     </div>
 
@@ -28,9 +28,9 @@
       <h3>Learning &amp; making</h3>
       <p>Inquiry-based lessons, the makerspace, and everything in between.</p>
       <div class="gallery">
-        <div class="gallery__item--b img-slot" style="--img:url('{{ url_for('static', filename='images/life-learning-1.jpg') }}');" data-label="images/life-learning-1.jpg"></div>
-        <div class="gallery__item--c img-slot" style="--img:url('{{ url_for('static', filename='images/life-learning-2.jpg') }}');" data-label="images/life-learning-2.jpg"></div>
-        <div class="gallery__item--d img-slot" style="--img:url('{{ url_for('static', filename='images/life-learning-3.jpg') }}');" data-label="images/life-learning-3.jpg"></div>
+        <div class="gallery__item--b img-slot" data-label="images/life-learning-1.jpg"><img src="{{ url_for('static', filename='images/life-learning-1.jpg') }}" alt="" onerror="this.closest('.img-slot').classList.add('img-slot--empty');this.remove();"></div>
+        <div class="gallery__item--c img-slot" data-label="images/life-learning-2.jpg"><img src="{{ url_for('static', filename='images/life-learning-2.jpg') }}" alt="" onerror="this.closest('.img-slot').classList.add('img-slot--empty');this.remove();"></div>
+        <div class="gallery__item--d img-slot" data-label="images/life-learning-3.jpg"><img src="{{ url_for('static', filename='images/life-learning-3.jpg') }}" alt="" onerror="this.closest('.img-slot').classList.add('img-slot--empty');this.remove();"></div>
       </div>
     </div>
 
@@ -38,9 +38,9 @@
       <h3>Play &amp; friendship</h3>
       <p>Break time, the playground, and forty nationalities figuring out the same games.</p>
       <div class="gallery">
-        <div class="gallery__item--c img-slot" style="--img:url('{{ url_for('static', filename='images/life-play-1.jpg') }}');" data-label="images/life-play-1.jpg"></div>
-        <div class="gallery__item--c img-slot" style="--img:url('{{ url_for('static', filename='images/life-play-2.jpg') }}');" data-label="images/life-play-2.jpg"></div>
-        <div class="gallery__item--b img-slot" style="--img:url('{{ url_for('static', filename='images/life-play-3.jpg') }}');" data-label="images/life-play-3.jpg"></div>
+        <div class="gallery__item--c img-slot" data-label="images/life-play-1.jpg"><img src="{{ url_for('static', filename='images/life-play-1.jpg') }}" alt="" onerror="this.closest('.img-slot').classList.add('img-slot--empty');this.remove();"></div>
+        <div class="gallery__item--c img-slot" data-label="images/life-play-2.jpg"><img src="{{ url_for('static', filename='images/life-play-2.jpg') }}" alt="" onerror="this.closest('.img-slot').classList.add('img-slot--empty');this.remove();"></div>
+        <div class="gallery__item--b img-slot" data-label="images/life-play-3.jpg"><img src="{{ url_for('static', filename='images/life-play-3.jpg') }}" alt="" onerror="this.closest('.img-slot').classList.add('img-slot--empty');this.remove();"></div>
       </div>
     </div>
 
@@ -48,9 +48,9 @@
       <h3>Trips &amp; celebrations</h3>
       <p>Bornholm, Norway, France, Germany — and whatever's coming up next.</p>
       <div class="gallery">
-        <div class="gallery__item--e img-slot" style="--img:url('{{ url_for('static', filename='images/life-trips-1.jpg') }}');" data-label="images/life-trips-1.jpg"></div>
-        <div class="gallery__item--c img-slot" style="--img:url('{{ url_for('static', filename='images/life-trips-2.jpg') }}');" data-label="images/life-trips-2.jpg"></div>
-        <div class="gallery__item--c img-slot" style="--img:url('{{ url_for('static', filename='images/life-trips-3.jpg') }}');" data-label="images/life-trips-3.jpg"></div>
+        <div class="gallery__item--e img-slot" data-label="images/life-trips-1.jpg"><img src="{{ url_for('static', filename='images/life-trips-1.jpg') }}" alt="" onerror="this.closest('.img-slot').classList.add('img-slot--empty');this.remove();"></div>
+        <div class="gallery__item--c img-slot" data-label="images/life-trips-2.jpg"><img src="{{ url_for('static', filename='images/life-trips-2.jpg') }}" alt="" onerror="this.closest('.img-slot').classList.add('img-slot--empty');this.remove();"></div>
+        <div class="gallery__item--c img-slot" data-label="images/life-trips-3.jpg"><img src="{{ url_for('static', filename='images/life-trips-3.jpg') }}" alt="" onerror="this.closest('.img-slot').classList.add('img-slot--empty');this.remove();"></div>
       </div>
     </div>
 
